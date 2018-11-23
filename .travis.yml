@@ -20,3 +20,4 @@ before_script: greenkeeper-lockfile-update
 after_script: greenkeeper-lockfile-upload
 script:
   - npm run lint
+  - npm run cy:run
