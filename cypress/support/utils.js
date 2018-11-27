@@ -8,6 +8,11 @@ export const expandTocItem = listItem =>
     .click()
     .should('have.attr', 'aria-expanded', 'true')
 
+export const verifyTocItemName = (TocItemCss, TocItemName) =>
+  cy.get(TocItemCss)
+    .find('a').first()
+    .should('have.text', TocItemName)
+
 // Check for logo presence in parent container and verify logo attributes
 export const verifyLogo = (parentCss, logoAltText, logoName) => {
   cy.get(parentCss)

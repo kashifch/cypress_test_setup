@@ -26,7 +26,6 @@ Cypress.Commands.add('login_using_api', (userEmail, userPassword) => {
       },
     })
   })
-  Cypress.Cookies.preserveOnce('edxloggedin', 'stage-edx-user-info')
 })
 
 Cypress.Commands.add('login_from_ui', (userEmail, userPassword) => {
@@ -35,4 +34,5 @@ Cypress.Commands.add('login_from_ui', (userEmail, userPassword) => {
   cy.get('#login-email').type(userEmail)
   cy.get('#login-password').type(userPassword)
   cy.get('.action').should('have.text', 'Sign in').click()
+  cy.get('.account-info').should('exist')
 })
