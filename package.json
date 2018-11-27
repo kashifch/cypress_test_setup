@@ -4,8 +4,8 @@
   "description": "e2e tests written in Cypress",
   "repository": "https://github.com/kashifch/cypress_test_setup",
   "scripts": {
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
+    "cy:open": "cypress open --env configFile=stage",
+    "cy:run": "cypress run --env configFile=stage",
     "lint": "eslint --ext .js --ext .jsx .",
     "precommit": "npm run lint"
   },
