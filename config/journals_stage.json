@@ -13,7 +13,7 @@
     "s3.amazonaws.com"
   ],
   "env": {
-    "ENVIRONMENT": "staging",
+    "ENVIRONMENT": "journals_stage",
     "journal_title": "E2E Tests Journal",
     "journal_price": 167,
     "lms_login_url": "https://courses.stage.edx.org/login",
