@@ -1,4 +1,5 @@
 {
     "viewportWith": 400,
-    "viewportHeight": 800
+    "viewportHeight": 800,
+    "ignoreTestFiles": "*.demo.js"
   }

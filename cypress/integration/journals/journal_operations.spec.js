@@ -20,7 +20,7 @@ describe('Verify Journal Navigation', () => {
 
   it('checks TOC panel for logged in user', () => {
     // Click on the Journal card
-    cy.contains('E2E Tests Journal').click()
+    cy.contains(Cypress.env('journal_title')).click()
     // Check for the presence of TOC panel
     cy.get('#side-nav-panel-toggle').should('have.text', 'Contents')
     // Check that by default TOC panel is closed
@@ -52,7 +52,7 @@ describe('Verify Journal Navigation', () => {
 
   it('browse pages using next and previous button', () => {
     // Click on the Journal card
-    cy.contains('E2E Tests Journal').click()
+    cy.contains(Cypress.env('journal_title')).click()
     // Go to a specific page in a specific chapter
     goToPage('Chapter 3', 'First Page')
     // Move to next page and confirm highlighted item and title of page is correct

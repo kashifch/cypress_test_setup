@@ -29,7 +29,7 @@ describe('Landing Page Configurations', () => {
 
   it('verifies About Page contents for logged out user', () => {
     // Click on the course card containing the name of Test Journal
-    cy.contains(Cypress.env('JOURNAL_NAME')).click()
+    cy.contains(Cypress.env('journal_title')).click()
     // Check for the presence of about key word in resulting url
     cy.url().should('include', '/about')
     // Check for the Course Information on course hero image
